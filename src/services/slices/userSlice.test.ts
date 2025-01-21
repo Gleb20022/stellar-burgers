@@ -5,8 +5,8 @@ import {
   logoutUser,
   registerNewUser,
   updateUserProfile
-} from './userSlice';
-import userReducer from './userSlice';
+} from './UserSlice';
+import userReducer from './UserSlice';
 import { TUser } from '@utils-types';
 
 describe('Проверка слоя "userSlice"', () => {
