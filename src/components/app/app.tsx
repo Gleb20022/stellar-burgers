@@ -22,7 +22,7 @@ import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import { useDispatch } from '../../services/store';
 import { useEffect } from 'react';
 import { getIngredientsList } from '../../services/slices/ingredientsSlice';
-import { fetchCurrentUser } from '../../services/slices/UserSlice';
+import { fetchCurrentUser } from '../../services/slices/userSlice';
 
 const App = () => {
   const dispatch = useDispatch();

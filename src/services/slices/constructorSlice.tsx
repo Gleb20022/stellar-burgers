@@ -2,7 +2,7 @@ import { TConstructorIngredient } from '@utils-types';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { v4 as uuidv4 } from 'uuid';
 
-type TConstructorState = {
+export type TConstructorState = {
   bun: TConstructorIngredient | null;
   ingredients: TConstructorIngredient[];
 };
@@ -73,3 +73,6 @@ export const {
 } = constructorSlice.actions;
 
 export const constructorSelector = constructorSlice.selectors;
+
+const constructorReducer = constructorSlice.reducer;
+export default constructorReducer;

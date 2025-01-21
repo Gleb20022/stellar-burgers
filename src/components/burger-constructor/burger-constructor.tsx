@@ -13,7 +13,7 @@ import {
   getorderModalData,
   fetchOrder
 } from '../../services/slices/orderSlice';
-import { isAuthCheckedSelector } from '../../services/slices/UserSlice';
+import { isAuthCheckedSelector } from '../../services/slices/userSlice';
 
 export const BurgerConstructor: FC = () => {
   const dispatch = useDispatch();
