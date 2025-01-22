@@ -6,7 +6,7 @@ import {
   logoutApi,
   registerUserApi,
   updateUserApi
-} from '@api';
+} from '../../utils/burger-api';
 
 type TUserState = {
   isAuthenticated: boolean;
@@ -14,7 +14,7 @@ type TUserState = {
   error: string | undefined;
 };
 
-const initialState: TUserState = {
+export const initialState: TUserState = {
   isAuthenticated: false,
   user: {
     name: '',
@@ -104,3 +104,6 @@ export const userSlice = createSlice({
 });
 
 export const { isAuthCheckedSelector, getUser, getName } = userSlice.selectors;
+
+const userReducer = userSlice.reducer;
+export default userReducer;

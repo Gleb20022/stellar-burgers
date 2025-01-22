@@ -1,8 +1,8 @@
 import { TOrder } from '@utils-types';
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { orderBurgerApi } from '@api';
+import { orderBurgerApi } from '../../utils/burger-api';
 
-type TOrderState = {
+export type TOrderState = {
   orderModalData: TOrder | null;
   orderRequest: boolean;
   error: string | null;
@@ -50,3 +50,6 @@ export const orderSlice = createSlice({
 export const { clearOrder } = orderSlice.actions;
 
 export const { getorderModalData, getOrderRequest } = orderSlice.selectors;
+
+const orderReducer = orderSlice.reducer;
+export default orderReducer;
